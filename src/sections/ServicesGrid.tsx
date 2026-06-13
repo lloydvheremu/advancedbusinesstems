@@ -13,35 +13,35 @@ const services = [
     title: 'Computer Repair',
     description:
       'Expert diagnostics and repairs for all computer issues. We fix hardware problems, remove viruses, upgrade systems, and restore your devices to peak performance.',
-    image: '/images/service-computer.jpg',
+    image: '/assets/service-computer.jpg',
   },
   {
     icon: Video,
     title: 'CCTV Installation',
     description:
       'Professional security camera installation for homes and businesses. Complete surveillance solutions with remote monitoring capabilities to keep your property safe.',
-    image: '/images/service-cctv.jpg',
+    image: '/assets/service-cctv.jpg',
   },
   {
     icon: SatelliteDish,
     title: 'DSTV Installation',
     description:
       'Expert DSTV installation and signal optimization services. We ensure perfect reception and help you get the most out of your satellite TV experience.',
-    image: '/images/service-dstv.jpg',
+    image: '/assets/service-dstv.jpg',
   },
   {
     icon: Sun,
     title: 'Solar Lights',
     description:
       'Energy-efficient solar lighting solutions for indoor and outdoor spaces. Eco-friendly, cost-effective lighting that keeps your property illuminated day and night.',
-    image: '/images/service-solar.jpg',
+    image: '/assets/service-solar.jpg',
   },
   {
     icon: Plug,
     title: 'Electrical Accessories',
     description:
       'Quality electrical accessories and installation services. From outlets and switches to complete electrical fittings for your home or business needs.',
-    image: '/images/service-electrical.jpg',
+    image: '/assets/service-electrical.jpg',
   },
 ];
 
@@ -89,7 +89,7 @@ export function ServicesGrid() {
               >
                 {/* Hover image */}
                 <div
-                  className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-20 transition-opacity duration-500"
+                  className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-40 transition-opacity duration-500"
                   style={{
                     backgroundImage: `url(${service.image})`,
                     maskImage: 'linear-gradient(to bottom, transparent 0%, black 100%)',

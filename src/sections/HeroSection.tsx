@@ -74,10 +74,10 @@ export function HeroSection() {
         muted
         loop
         playsInline
-        poster="/images/hero-poster.jpg"
+        poster="/assets/hero-poster.jpg"
         className="absolute inset-0 w-full h-full object-cover"
       >
-        <source src="/videos/hero-highway.mp4" type="video/mp4" />
+        <source src="/assets/hero-highway.mp4" type="video/mp4" />
       </video>
 
       {/* Gradient overlay */}
