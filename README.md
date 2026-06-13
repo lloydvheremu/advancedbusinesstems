@@ -1,122 +1,34 @@
-# Advanced Business System - Landing Website
+# Advanced Business System
 
-A modern, professional landing website for **Advanced Business System Pty Ltd** — your trusted technology and electrical solutions partner in Queenstown, South Africa.
+A modern, production-ready React landing website for **Advanced Business System Pty Ltd** — your trusted technology and electrical solutions partner in Queenstown, South Africa.
 
 **Live Website:** [Visit Site](https://lloydvheremu.github.io/advancedbusinesstems/)
 
 ---
 
-## 🎯 About Advanced Business System
+## 🎯 About
 
-We provide comprehensive technology and electrical solutions:
-
+Advanced Business System specializes in:
 - 💻 **Computer Repair** - Diagnostics, hardware fixes, virus removal, system upgrades
 - 📹 **CCTV Installation** - Professional security camera solutions with remote monitoring
 - 📡 **DSTV Installation** - Expert satellite TV setup and signal optimization
 - ☀️ **Solar Lights** - Energy-efficient indoor & outdoor solar lighting
 - ⚡ **Electrical Accessories** - Quality electrical fittings and installation services
 
-**📍 Location:** Queenstown, South Africa  
-**📞 Phone:** +27 84 890 5690  
-**📧 Email:** lastvheremu1@gmail.com  
-**💬 WhatsApp:** [Chat with us](https://wa.me/27848905690)
+**Location:** Queenstown, South Africa  
+**Phone:** +27 84 890 5690  
+**Email:** lastvheremu1@gmail.com  
+**WhatsApp:** [Chat with us](https://wa.me/27848905690)
 
 ---
 
-## 🚀 Tech Stack
-
-This project is built with modern React technologies:
-
-- **React 18.3.0** - UI framework
-- **TypeScript** - Type-safe JavaScript
-- **Vite** - Fast build tool & dev server
-- **Tailwind CSS 3.4.0** - Utility-first styling
-- **GSAP 3.12.0** - Advanced animations (ScrollTrigger)
-- **Lenis 1.1.0** - Smooth scroll behavior
-- **React Fast Marquee** - Services ticker
-- **Lucide React** - Icon library
-
----
-
-## 📁 Project Structure
-
-```
-advancedbusinesstems/
-├── src/
-│   ├── components/           # Reusable components
-│   │   ├── Navigation.tsx    # Fixed navbar with mobile menu
-│   │   ├── Footer.tsx        # Footer with links & info
-│   │   └── FloatingWhatsApp.tsx
-│   ├── sections/             # Page sections
-│   │   ├── HeroSection.tsx
-│   │   ├── ServicesTicker.tsx
-│   │   ├── ServicesGrid.tsx
-│   │   ├── AboutSection.tsx
-│   │   ├── GallerySection.tsx
-│   │   └── ContactSection.tsx
-│   ├── hooks/                # Custom React hooks
-│   │   ├── useLenis.ts      # Smooth scroll integration
-│   │   └── useScrollDirection.ts
-│   ├── App.tsx              # Main app component
-│   ├── main.tsx             # Entry point
-│   └── index.css            # Global styles
-├── public/                   # Static assets
-├── index.html               # HTML template
-├── vite.config.ts           # Vite configuration
-├── tailwind.config.js       # Tailwind CSS config
-├── tsconfig.json            # TypeScript config
-├── package.json             # Dependencies
-└── README.md                # This file
-```
-
----
-
-## ✨ Key Features
-
-### Website Sections
-
-1. **Navigation** - Fixed header, hide/show on scroll, mobile overlay menu, smooth-scroll anchor links
-2. **Hero Section** - Full-viewport height, gradient background, blur-reveal headline, CTAs, scroll indicator
-3. **Services Ticker** - Animated marquee with scroll-triggered illumination
-4. **Services Grid** - 5 service cards with hover effects and image previews
-5. **About Section** - Two-column layout with company story, stats, decorative SVG
-6. **Gallery** - 6-item portfolio grid with Alba CSS-only hover effects
-7. **Contact Section** - Contact form + info card with location, phone, email, WhatsApp
-8. **Footer** - Company info, links, social icons, copyright
-9. **Floating WhatsApp Button** - Fixed corner button with pulse animation
-
-### Design System
-
-**Color Palette (Africa-inspired):**
-```
-Primary:   #C85A00  (Burnt Orange)
-Secondary: #3E1F00  (Earth Brown)
-Accent:    #F5A623  (Golden Savanna)
-Dark BG:   #1A0A00
-Light BG:  #FFF8F2
-```
-
-**Typography:**
-- Headings: Space Grotesk (Google Fonts)
-- Body: Inter (Google Fonts)
-
-**Animations:**
-- Blur-reveal text animations (GSAP + ScrollTrigger)
-- Scroll-triggered fade-in sections
-- Smooth scroll with Lenis
-- Hover effects on cards and buttons
-- Pulse animations on WhatsApp button
-- Staggered entrance animations
-
----
-
-## 🛠️ Installation & Setup
+## 🚀 Quick Start
 
 ### Prerequisites
-- Node.js 16+ 
-- npm or yarn
+- **Node.js** 16+ ([Download](https://nodejs.org/))
+- **npm** (comes with Node.js)
 
-### Clone & Install
+### Installation & Development
 
 ```bash
 # Clone the repository
@@ -125,72 +37,136 @@ cd advancedbusinesstems
 
 # Install dependencies
 npm install
-# or
-yarn install
-```
 
-### Development Server
-
-Start the local development server with hot module reload (HMR):
-
-```bash
+# Start development server (with hot module reload)
 npm run dev
-# or
-yarn dev
-```
 
-Open [http://localhost:5173](http://localhost:5173) in your browser. Changes to files will automatically refresh the page.
+# Open http://localhost:5173 in your browser
+```
 
 ### Build for Production
 
 ```bash
+# Create optimized production build
 npm run build
-# or
-yarn build
-```
 
-Generates optimized files in the `dist/` folder ready for deployment.
-
-### Preview Production Build
-
-```bash
+# Preview the production build locally
 npm run preview
-# or
-yarn preview
 ```
 
 ---
 
-## 📝 Customization Guide
+## 📁 Project Structure
 
-### Update Business Information
-
-Edit `src/App.tsx` and relevant section files:
-
-**Contact Details:**
-```typescript
-// Update in ContactSection.tsx
-const PHONE = "+27 84 890 5690";
-const EMAIL = "lastvheremu1@gmail.com";
-const WHATSAPP_URL = "https://wa.me/27848905690";
+```
+advancedbusinesstems/
+├── src/
+│   ├── components/           # Reusable React components
+│   │   ├── Navigation.tsx     # Fixed navbar with mobile menu
+│   │   ├── Footer.tsx         # Company footer with links
+│   │   ├── FloatingWhatsApp.tsx
+│   │   ├── BlurReveal.tsx     # Animated text reveal
+│   │   ├── SectionHeader.tsx
+│   │   ├── OrbitGraphic.tsx   # SVG decoration
+│   │   ├── ScrollIndicator.tsx
+│   │   └── AnimatedCounter.tsx
+│   │
+│   ├── sections/             # Page sections
+│   │   ├── HeroSection.tsx
+│   │   ├── ServicesTicker.tsx # Marquee animation
+│   │   ├── ServicesGrid.tsx
+│   │   ├── AboutSection.tsx
+│   │   ├── GallerySection.tsx
+│   │   └── ContactSection.tsx
+│   │
+│   ├── hooks/                # Custom React hooks
+│   │   ├── useLenis.ts       # Smooth scroll integration
+│   │   └── useScrollDirection.ts
+│   │
+│   ├── App.tsx               # Main app component
+│   ├── main.tsx              # React entry point
+│   └── index.css             # Global styles
+│
+├── public/                   # Static assets
+├── index.html                # React DOM mount point
+├── vite.config.ts            # Vite configuration
+├── tsconfig.json             # TypeScript config
+├── tailwind.config.js        # Tailwind CSS config
+├── package.json              # Dependencies & scripts
+├── tech-spec.md              # Technical specifications
+├── CLAUDE.md                 # Development guidelines
+└── README.md                 # This file
 ```
 
-**Service Cards:**
-Edit `src/sections/ServicesGrid.tsx` to add/remove/modify services:
-```typescript
-const services = [
-  {
-    icon: 'icon-name',
-    title: 'Service Name',
-    description: 'Service description...'
-  },
-  // Add more services
-];
+---
+
+## 🎨 Key Features
+
+### Components & Sections
+1. **Navigation** - Fixed header with smooth scroll, mobile overlay menu
+2. **Hero Section** - Full-height intro with gradient overlay, blur-reveal headline, CTAs
+3. **Services Ticker** - Animated marquee with scroll-triggered illumination
+4. **Services Grid** - 5 service cards with hover animations and preview images
+5. **About Section** - Two-column layout with blur-reveal text and orbit SVG
+6. **Gallery** - 6-item grid with Alba CSS-only hover fade effects
+7. **Contact Form** - Two-column layout with form validation
+8. **Footer** - Multi-column layout with staggered animations
+9. **Floating WhatsApp Button** - Fixed position with pulse ring animation
+
+### Technology Stack
+- **React 18.3** - UI framework
+- **TypeScript** - Type-safe JavaScript
+- **Vite** - Fast build tool & dev server
+- **Tailwind CSS 3.4** - Utility-first styling
+- **GSAP 3.12** - Advanced animations & ScrollTrigger
+- **Lenis 1.1** - Smooth scroll library
+- **react-fast-marquee 1.6** - Services ticker
+- **lucide-react 0.400** - Icon library
+
+### Design System
+**Color Palette (Africa-inspired):**
+- Primary: `#C85A00` (Burnt Orange)
+- Secondary: `#3E1F00` (Earth Brown)
+- Accent: `#F5A623` (Golden Savanna)
+
+**Typography:**
+- Display: Space Grotesk (geometric sans-serif)
+- Body: Inter (clean, readable)
+
+**Key Features:**
+- Blur-reveal text animations (GSAP + ScrollTrigger)
+- Smooth scroll navigation (Lenis integration)
+- Scroll-triggered animations for all sections
+- Mobile-first responsive design
+- Accessibility-focused (prefers-reduced-motion support)
+
+---
+
+## 🔧 Development
+
+### Available Scripts
+
+```bash
+# Start development server with HMR
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+
+# Type check (TypeScript)
+npm run type-check
+
+# Lint code (ESLint)
+npm run lint
 ```
 
-### Change Brand Colors
+### Customization
 
-Edit `tailwind.config.js`:
+#### Change Brand Colors
+Update color variables in `tailwind.config.js`:
 ```javascript
 theme: {
   extend: {
@@ -203,38 +179,70 @@ theme: {
 }
 ```
 
-### Modify Navigation Links
+#### Update Business Information
+Edit text directly in component files:
+- `src/sections/HeroSection.tsx` - Hero headline & subtitle
+- `src/sections/AboutSection.tsx` - Company description & stats
+- `src/components/Footer.tsx` - Footer content & links
+- `src/sections/ContactSection.tsx` - Contact details
 
-Edit `src/components/Navigation.tsx`:
+#### Add/Remove Services
+Modify the services array in `src/sections/ServicesGrid.tsx`:
+```typescript
+const services = [
+  {
+    icon: 'Laptop', // lucide-react icon name
+    title: 'Service Name',
+    description: 'Service description...',
+  },
+  // Add more services
+];
+```
+
+#### Customize Navbar Links
+Edit navigation links in `src/components/Navigation.tsx`:
 ```typescript
 const navLinks = [
   { label: 'Home', href: '#home' },
   { label: 'Services', href: '#services' },
-  // Add/remove links
+  // Add more links
 ];
 ```
 
-### Update Gallery Images
-
-Replace placeholder images in `src/sections/GallerySection.tsx`:
+#### Replace Gallery Images
+Update image paths in `src/sections/GallerySection.tsx`:
 ```typescript
-const gallery = [
-  {
-    id: 1,
-    image: '/images/your-image.jpg',
-    title: 'Computer Repair'
-  },
-  // Update images
-];
+<img src="/images/your-image.jpg" alt="Description" />
 ```
 
-### Customize Animations
+---
 
-GSAP animations are configured in individual section components. Adjust:
-- Fade duration and delay
-- Scroll trigger thresholds
-- Stagger values
-- Blur amounts
+## 📱 Responsive Design
+
+The website is fully responsive with mobile-first approach:
+- **Desktop** (1200px+) - Full multi-column layouts, animations enabled
+- **Tablet** (768px-1199px) - Adjusted spacing, optimized font sizes
+- **Mobile** (< 768px) - Single-column, hamburger menu, touch-optimized
+
+Tested on:
+- ✅ Chrome, Firefox, Safari, Edge
+- ✅ iOS Safari, Android Chrome
+- ✅ Tablets & large mobile devices
+
+---
+
+## 🎬 Animation Details
+
+| Animation | Library | Trigger |
+|-----------|---------|---------|
+| Blur word reveal | GSAP + ScrollTrigger | On scroll into view |
+| Navbar hide/show | CSS + React hook | Scroll direction |
+| Service card hover | CSS transitions | Mouse hover |
+| Section fade-in | GSAP + ScrollTrigger | Section in viewport |
+| Marquee scroll | react-fast-marquee | Auto-play with illumination |
+| Stat counter | GSAP + React state | Scroll into About section |
+| WhatsApp pulse | CSS keyframes | Continuous animation |
+| Gallery hover | CSS only | Alba effect on hover |
 
 ---
 
@@ -243,19 +251,16 @@ GSAP animations are configured in individual section components. Adjust:
 ### Deploy to GitHub Pages
 
 ```bash
-# Build the project
+# Build production version
 npm run build
 
-# Push to GitHub
+# Push to GitHub (Pages auto-deploys from main branch)
 git add .
-git commit -m "Update website"
+git commit -m "Deploy production build"
 git push origin main
 ```
 
-Then enable GitHub Pages:
-1. Go to repository **Settings** → **Pages**
-2. Set source to `gh-pages` branch (if using GitHub Actions)
-3. Or set source to `main` branch and `docs` folder
+Site publishes to: `https://lloydvheremu.github.io/advancedbusinesstems/`
 
 ### Deploy to Netlify
 
@@ -263,7 +268,7 @@ Then enable GitHub Pages:
 # Install Netlify CLI
 npm install -g netlify-cli
 
-# Build and deploy
+# Deploy
 npm run build
 netlify deploy --prod --dir=dist
 ```
@@ -275,102 +280,38 @@ netlify deploy --prod --dir=dist
 npm install -g vercel
 
 # Deploy
-vercel
+vercel --prod
 ```
 
 ### Deploy to Traditional Hosting
 
 1. Run `npm run build`
-2. Upload the `dist/` folder to your host's `public_html/`
-3. Ensure `.htaccess` is configured for SPA routing (if on Apache):
-
-```apache
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteBase /
-  RewriteRule ^index\.html$ - [L]
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule . /index.html [L]
-</IfModule>
-```
+2. Upload `dist/` folder contents to your host's `public_html/`
+3. Configure server to route all requests to `index.html` (for SPA routing)
 
 ---
 
 ## 📚 Documentation
 
-- **`tech-spec.md`** - Detailed technical specifications, components, animations
-- **`CLAUDE.md`** - AI development guidelines
-
----
-
-## 🎨 Component Documentation
-
-### Navigation Component
-- Fixed positioning with hide/show on scroll
-- Mobile hamburger menu overlay
-- Smooth scroll to sections via Lenis
-- Active link highlighting
-
-### Hero Section
-- Full viewport height gradient background
-- Blur-reveal animated headline
-- CTA buttons (View Services, WhatsApp)
-- Animated scroll indicator
-
-### Services Ticker
-- Continuous marquee animation
-- Scroll-triggered word illumination
-- Responsive design
-
-### Services Grid
-- 5 service cards in responsive grid
-- Hover effects with transform & shadow
-- Image preview on hover
-- Call-to-action buttons
-
-### About Section
-- Two-column layout (text + decorative SVG)
-- Animated counter statistics
-- Blur-reveal text animations
-- African geometric pattern SVG
-
-### Gallery Section
-- 6-item grid layout
-- Alba CSS hover effect (fade siblings)
-- Smooth scale transform on hover
-- Icon overlays with titles
-
-### Contact Section
-- Two-column layout (form + info)
-- Form validation (required fields, email)
-- Contact info card with icons
-- WhatsApp catalogue link
-
----
-
-## 🔗 External Resources
-
-- [React Documentation](https://react.dev)
-- [TypeScript Handbook](https://www.typescriptlang.org/docs/)
-- [Vite Documentation](https://vitejs.dev/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [GSAP Documentation](https://greensock.com/gsap/)
-- [Lenis Smooth Scroll](https://github.com/studio-freight/lenis)
-- [Lucide Icons](https://lucide.dev/)
-- [Google Fonts](https://fonts.google.com/)
+- **`tech-spec.md`** - Detailed technical specifications, component inventory, animation implementation
+- **`CLAUDE.md`** - Development guidelines for AI-assisted coding
+- **React Docs:** [react.dev](https://react.dev/)
+- **TypeScript Docs:** [typescriptlang.org](https://www.typescriptlang.org/)
+- **Vite Docs:** [vitejs.dev](https://vitejs.dev/)
+- **GSAP Docs:** [greensock.com](https://greensock.com/)
+- **Tailwind Docs:** [tailwindcss.com](https://tailwindcss.com/)
 
 ---
 
 ## 🐛 Troubleshooting
 
-### Port 5173 Already in Use
+### Port Already in Use
 ```bash
 # Use a different port
 npm run dev -- --port 3000
 ```
 
-### Build Errors
+### Build Fails
 ```bash
 # Clear node_modules and reinstall
 rm -rf node_modules package-lock.json
@@ -378,19 +319,44 @@ npm install
 npm run build
 ```
 
-### Images Not Loading
-- Place images in `public/` folder
-- Reference as `/images/filename.jpg` (with leading slash)
+### Styles Not Applying
+- Ensure Tailwind CSS is installed: `npm list tailwindcss`
+- Check `tailwind.config.js` includes correct template paths
+- Rebuild: `npm run build`
 
 ### Animations Not Smooth
-- Check browser DevTools for performance issues
-- Reduce animation complexity or duration
-- Ensure GPU acceleration is enabled
+- Check browser hardware acceleration is enabled
+- Reduce animation complexity in individual components
+- Test with `prefers-reduced-motion` enabled for accessibility
 
-### Mobile Menu Not Working
-- Check JavaScript is enabled in browser
-- Inspect browser console for errors (F12)
-- Verify Tailwind breakpoints are correct
+### Images Not Loading
+- Place images in `public/` folder
+- Use paths with leading slash: `<img src="/images/photo.jpg" />`
+- For external CDN images, ensure CORS headers are set
+
+---
+
+## 🧪 Testing
+
+### Manual Testing Checklist
+- [ ] All navigation links work
+- [ ] Mobile menu opens/closes
+- [ ] Form validation works
+- [ ] Animations play smoothly
+- [ ] Images load correctly
+- [ ] WhatsApp links work
+- [ ] Contact form submits properly
+- [ ] Responsive on mobile/tablet/desktop
+
+### Performance Optimization
+```bash
+# Check bundle size
+npm run build
+# Review dist/ folder size
+
+# Build analysis
+npm install --save-dev rollup-plugin-visualizer
+```
 
 ---
 
@@ -403,22 +369,16 @@ The website is optimized for:
 - ✅ CSS minification with Tailwind
 - ✅ JavaScript minification with Vite
 
-Run performance checks:
-```bash
-npm run build  # Check bundle size
-```
-
 ---
 
 ## 🔐 SEO & Meta Tags
 
 Update in `index.html`:
 ```html
-<meta name="description" content="Your page description">
-<meta name="keywords" content="technology, electrical, solutions">
+<meta name="description" content="Advanced Business System - Your Trusted Technology & Electrical Solutions Partner">
+<meta name="keywords" content="computer repair, CCTV, DSTV, solar lights, electrical">
 <meta property="og:title" content="Advanced Business System">
-<meta property="og:description" content="Your trusted solutions partner">
-<meta property="og:image" content="your-image-url">
+<meta property="og:description" content="Your trusted solutions partner in Queenstown, South Africa">
 ```
 
 ---
@@ -428,30 +388,56 @@ Update in `index.html`:
 **For Website Issues:**
 - Email: lastvheremu1@gmail.com
 - WhatsApp: +27 84 890 5690
+- GitHub Issues: [Open an issue](https://github.com/lloydvheremu/advancedbusinesstems/issues)
 
-**For Business Services:**
+**For Services:**
 - Phone: +27 84 890 5690
-- Hours: Monday–Saturday, 8AM–6PM (Queenstown, South Africa)
+- Hours: Monday–Saturday, 8AM–6PM (Queenstown time)
 
 ---
 
 ## 📄 License
 
-© 2025 Advanced Business System Pty Ltd. All rights reserved.
+This website is for **Advanced Business System Pty Ltd**. All rights reserved.
 
 ---
 
-## 🎓 Contributing
+## 🔄 Version History
 
-To contribute to this project:
+### v1.0.0 (Current - Production)
+✅ **React 18 + TypeScript**  
+✅ **Production-ready deployment**  
+✅ **Advanced GSAP animations**  
+✅ **Smooth scroll (Lenis)**  
+✅ **Fully responsive design**  
+✅ **SEO optimized**  
+✅ **Performance optimized**
 
-1. Create a feature branch (`git checkout -b feature/your-feature`)
-2. Make your changes
-3. Commit (`git commit -m "Add feature"`)
-4. Push (`git push origin feature/your-feature`)
+---
+
+## 🎓 Learning Resources
+
+- **React:** [react.dev](https://react.dev/) | [React patterns](https://react.dev/learn)
+- **TypeScript:** [typescriptlang.org](https://www.typescriptlang.org/docs/)
+- **Tailwind CSS:** [tailwindcss.com](https://tailwindcss.com/docs/)
+- **GSAP:** [greensock.com](https://greensock.com/docs/) | [ScrollTrigger](https://greensock.com/scrolltrigger/)
+- **Vite:** [vitejs.dev](https://vitejs.dev/guide/)
+- **Web Design:** [CSS-Tricks](https://css-tricks.com/)
+
+---
+
+## 🤝 Contributing
+
+Found a bug or have an improvement idea?
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/improvement`)
+3. Commit your changes (`git commit -m 'Add improvement'`)
+4. Push to the branch (`git push origin feature/improvement`)
 5. Open a Pull Request
 
 ---
 
 **Made with ❤️ for Advanced Business System**  
-*Proudly serving Queenstown, South Africa*
+**Proudly serving Queenstown, South Africa**
+
+*React · TypeScript · Vite · GSAP · Tailwind CSS · Lenis*
